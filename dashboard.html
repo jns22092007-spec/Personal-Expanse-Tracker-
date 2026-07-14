@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<a href="{% url 'add_expense' %}">Add Expense</a>
-<ul>
-{% for e in expenses %}
-<li>{{ e.expense_date }} - {{ e.category }} - ₹{{ e.amount }}</li>
-{% empty %}<li>No expenses.</li>{% endfor %}
-</ul>
-{% endblock %}
